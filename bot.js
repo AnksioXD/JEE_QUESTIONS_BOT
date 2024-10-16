@@ -1,7 +1,21 @@
 import { Client, GatewayIntentBits } from 'discord.js';
 import fs from 'fs/promises';
 import dotenv from 'dotenv/config';
+import express from 'express';
 
+// Create Express app
+const app = express();
+
+// Define a simple route
+app.get('/', (req, res) => {
+  res.send('Discord Bot Server');
+});
+
+// Start the server
+const PORT = 8070;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 const TOKEN = process.env.TOKEN;
 const CHANNEL_ID = process.env.CHANNEL_ID;
 
