@@ -42,8 +42,6 @@ const startSendingQuestions = async (channelId) => {
                 const questionObj = questions[questionIndex];
 
                 const messageContent = questionObj.question;
-
-                await channel.send("random question at 5 sec interval test");
                 await channel.send(messageContent);
 
                 questionIndex++;
