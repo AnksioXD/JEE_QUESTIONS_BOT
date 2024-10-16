@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-const PORT = 0.0.0.0;
+const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
